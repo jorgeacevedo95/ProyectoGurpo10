@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion de empleados IANSA</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/funcion.js"></script>
+</head>
+<body id="cuerpoLogin">
+    <div class="tituloLogin" style="width: 25em; margin: 0 auto;">
+        <h1>Ingreso de empleados</h1>
+    </div>    
+    <form action="" method="get" name="formLogin" id="formLogin" onSubmit="return validar_login()">
+        <img src="images/logoIANSA.png" width="200" height="200" onclick="location.href='https://empresasiansa.cl/iansa-cero-k/'" style="cursor:pointer ;"><br><br>
+        <div><input type="email" name="usuario" maxlength="50" id="usuario" placeholder="@iansa.com" pattern=".+@iansa\.com">
+            <img src="images/user.png" width="20" height="20">
+        </div><br>
+        <div><input type="password" name="password" id="password" placeholder="Contraseña">
+            <img src="images/padlock.png" width="20" height="20">
+        </div><br>
+        <button type="submit" value="Enviar" id="botonIngresoLogin" style="cursor:pointer ;">Ingresar</button> <br><br>
+        <div class="OlvidoUyC">¿Olvido su <a href="/olvidoContraseña.html" target="_self" style="cursor:pointer ;">usuario o contraseñas?</a></div>
+    </form>
+    
+</body>
+</html>

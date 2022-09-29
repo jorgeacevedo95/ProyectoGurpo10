@@ -1,0 +1,203 @@
+/*estilos Login*/
+.tituloLogin{
+    color:#ffae00;
+    font-family:sans-serif;
+    text-align: center;
+    background-color: #657bf762;
+    border-radius: 10px;
+    
+}
+#formLogin{
+    width: 350px;
+    padding: 16px;
+    border-radius: 10px;
+    margin: auto;
+    background-color: #e9d7a270;
+    text-align: center;
+    font-family: Arial;
+    font-size: large;
+}
+#cuerpoLogin{
+    background-image: url('../images/fondoLogin.jpg');
+    background-size: cover;
+}
+#botonIngresoLogin{
+    border-radius: 10px;
+    background-color: green;
+    color:honeydew;
+    font-size: large;
+}
+.OlvidoUyC{
+    font-size: small;
+}
+/*estilos empleados*/
+.datosPersonales{   
+    padding: 16px;
+    border-radius: 10px;
+    margin: auto;
+    background-color: #2369d18e;;
+    text-align: center;
+    font-family: Arial;
+    font-size: large;
+    width: 40em; 
+}
+#cuerpoEmpleado{
+    background-image: url('../images/fondoEmpleado.jpg');
+    background-size: cover;    
+}
+.botonSalidaLogin{
+    border-radius: 10px;
+    background-color: green;
+    color:honeydew;
+    font-size: large;
+    -webkit-transition: background-color 1s linear;
+    transition: background-color 1s linear;
+}
+.botonSalidaLogin:hover{
+    background-color: red;
+}
+/*estilos olvido contraseña*/
+#formOlvidoCon{
+    width: 350px;
+    padding: 16px;
+    border-radius: 10px;
+    margin: auto;
+    background-color: #e9d7a270;
+    text-align: center;
+    font-family: Arial;
+    font-size: large;
+}
+#cuerpoOlvidoCon{
+    background-image: url('../images/fondoOlvidoCon.jpg');
+    background-size: cover;
+}
+/*estilos administrador*/
+#cuerpoAdministrador{
+    background-image: url('../images/fondoAdmin.jpg');
+    background-size: cover; 
+    background-repeat: no-repeat;
+    
+}
+#botonAdminRegis {
+    border-radius: 10px;
+    border-style:none;
+    color:black;
+    font-size: large;
+    background-color: #F7DC6F ;
+    -webkit-transition: background-color 1s linear;
+    transition: background-color 1s linear;
+    transition: color 1s linear;
+}
+#botonAdminRegis:hover{
+    background-color:rgba(72, 72, 255, 0.507);
+    color:white;
+}
+#botonAdminGesti{
+    border-radius: 10px;
+    border-style:none;
+    color:black;
+    font-size: large;
+    background-color: #F7DC6F ;
+    -webkit-transition: background-color 1s linear;
+    transition: background-color 1s linear;
+    transition: color 1s linear;
+
+}#botonAdminGesti:hover{
+    background-color:rgba(252, 63, 63, 0.589);
+    color:white;
+}
+
+.botonAceptarRegis{
+    border-radius: 10px;
+    background-color: #F7DC6F;
+    color: black;
+    font-size: large;
+    -webkit-transition: background-color 1s linear;
+    transition: background-color 1s linear;
+    transition: color 1s linear;
+}
+.botonAceptarRegis:hover{
+    background-color: rgba(72, 72, 255, 0.507);;
+    color:white;
+}
+.botonAceptarGesti{
+    border-radius: 10px;
+    background-color: #F7DC6F;
+    color: black;
+    font-size: large;
+    -webkit-transition: background-color 1s linear;
+    transition: background-color 1s linear;
+    transition: color 1s linear;
+}
+.botonAceptarGesti:hover{
+    background-color: rgba(252, 63, 63, 0.589);
+    color:white;
+}
+
+#datosPersonalesAdmin{   
+    padding: 16px;
+    border-radius: 10px;
+    margin: auto;
+    background-color: #2369d18e;
+    text-align: center;
+    font-family: Arial;
+    font-size: large;
+    width: 40em;
+    height: 54.5em;
+    overflow: hidden;
+    overflow-y: auto;
+}
+#contenidoDatos{
+    position: relative;
+    
+}
+#contenidoDatos>div{
+    top: 0;
+    left: 100%;
+    position: absolute;
+    width: 100%;
+    transition: .6s all;
+}
+.deslizar{
+    left: 0 !important;
+}
+.deslizarizquierda{
+    left: -100% !important;
+
+}
+.deslizarDerecha{
+    left: 100 !important;
+}
+/*estilos administrador*/
+#botonAdminElimin {
+    border-radius: 10px;
+    border-style:none;
+    color:black;
+    font-size: large;
+    background-color: #F7DC6F ;
+    -webkit-transition: background-color 1s linear;
+    transition: background-color 1s linear;
+    transition: color 1s linear;
+}
+#botonAdminElimin:hover{
+    background-color:rgba(35, 134, 40, 0.527);
+    color:white;
+}
+
+.botonAceptarElim{
+    border-radius: 10px;
+    background-color: #F7DC6F;
+    color: black;
+    font-size: large;
+    -webkit-transition: background-color 1s linear;
+    transition: background-color 1s linear;
+    transition: color 1s linear;
+}
+.botonAceptarElim:hover{
+    background-color: rgba(22, 131, 27, 0.507);
+    color:white;
+}
+#cuerpoSuperAdministrador{
+    background-image: url('../images/fondoSuperAdmin.jpg');
+    background-size: cover;
+}

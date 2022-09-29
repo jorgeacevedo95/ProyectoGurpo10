@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/funcion.js"></script>
+    <title>Administrador</title>
+</head>
+<body id="cuerpoAdministrador">      
+  <div style="text-align: center;">
+    <table style="margin: 0 auto; border-collapse: separate; border-spacing: 150px 20px;" > 
+      <tr>
+        <th><img src="images/profile.png" width="200" height="200"></th>   
+        <th><img src="images/logoIANSA.png" width="200" height="200"></th>                 
+      </tr>      
+    </table>
+  </div>
+  <div>
+    <table  style="margin: 0 auto; border-collapse: separate; border-spacing: 260px 25px;">
+      <tr>
+        <th><button value="Gestionar" id="botonAdminGesti" style="cursor:pointer;" onclick="deslizarGestionar()">Gestionar empleado antiguo</button></th>
+        <th><button value="Registrar" id="botonAdminRegis" style="cursor:pointer;" onclick="deslizarRegistro()">Registrar nuevo empleado</button></th>
+      </tr>
+    </table>
+  </div> 
+  <div id="datosPersonalesAdmin">
+
+    <div id="contenidoDatos">
+
+      <div id="contenidoDatosRegistro" style="margin: 7px ">
+        <table class="table" ;>
+          <thead  class="thead-dark">
+            <tr>
+              <th scope="row" colspan="3" style="border-radius: 10px;">Registrar</th>
+            </tr>                  
+          </thead>
+          <tbody style="color: whitesmoke;">
+            <tr>
+              <th scope="row" colspan="2">Numero de identificación</th>                  
+              <td><input type="number" id="identificación" name="identificación" maxlength="50"></td>
+            </tr>
+            <tr>
+              <th scope="row" colspan="2">Nombre completo</th>                  
+              <td><input type="text" id="nombre" name="nombre" maxlength="50"></td>
+            </tr>
+            <tr>
+              <th scope="row" colspan="2">Cargo</th>                  
+              <td>
+                <select name="cargo" id="cargo">
+                    <option value="empleado">Empleado</option>
+                    <option value="aministrador">Aministrador</option>
+                    <option value="superAministrador">Super Aministrador</option>
+                </select>
+            </td>
+            </tr>
+            <tr>
+              <th scope="row" colspan="2">Fecha de ingreso</th>                  
+              <td><input type="date" id="fechaIngreso" name="fechaIngreso" value="dd/mm/a" min="2022-01-01" max="2022-12-31"></td>
+            </tr>
+            <tr>
+              <th scope="row" colspan="2">Fechas de terminacion de contrato</th>              
+              <td><input type="date" id="fechaFinCont" name="fechaFinCont" value="dd/mm/aa" min="2022-01-01" max="2022-12-31"></td>
+            </tr>
+            <tr>
+              <th scope="row" colspan="2">Tipo de contrato</th>                
+              <td><input type="text" id="tipoContrato" name="tipoContrato" maxlength="50"></td>
+            </tr>              
+            <tr>
+              <th scope="row" colspan="2">Dependencia</th>
+              <td><input type="text" id="dependencia" name="dependencia" maxlength="50"></td>
+            </tr>
+            <tr>
+              <th scope="row" colspan="2">Salario</th>
+              <td><input type="number" id="salario" name="salario" maxlength="50"></td>
+            </tr>
+            <tr class="thead-dark">
+              <th scope="row" colspan="3" style="border-radius: 10px;">
+                <button class="botonAceptarRegis" style="cursor:pointer;">Aceptar</button>
+              </th>
+            </tr>
+          </tbody>
+        </table>
+      </div>  
+
+      <div id="contenidoDatosGestion" style="margin: 7px ;">
+        <table class="table" >
+          <thead  class="thead-dark">
+            <tr>
+              <th scope="row" colspan="3" style="border-radius: 10px;">Gestionar</th>
+            </tr>                  
+          </thead>
+          <tbody style="color: whitesmoke;">
+            <tr>
+              <th scope="row" colspan="3">
+                <input type="number" name="buscarEmpleado" id="buscarEmpleado" placeholder="# de identificación">
+                <img src="images/lupa.png" width="30" height="30" style="cursor:pointer;">
+              </th>                  
+            </tr>
+            <tr>
+              <th scope="row" colspan="2">Nombre completo</th>                  
+              <td><input type="text" id="nombre" name="nombre" maxlength="50"></td>
+            </tr>
+            <tr>
+              <th scope="row" colspan="2">Cargo</th>                  
+              <td><input type="text" id="cargo" name="cargo" maxlength="50"></td>
+            </tr>
+            <tr>
+              <th scope="row" colspan="2">Fecha de ingreso</th>                  
+              <td><input type="date" id="fechaIngreso" name="fechaIngreso" value="dd/mm/a" min="2022-01-01" max="2022-12-31"></td>
+            </tr>
+            <tr>
+              <th scope="row" colspan="2">Fechas de terminacion de contrato</th>              
+              <td><input type="date" id="fechaFinCont" name="fechaFinCont" value="dd/mm/aa" min="2022-01-01" max="2022-12-31"></td>
+            </tr>
+            <tr>
+              <th scope="row" colspan="2">Tipo de contrato</th>                
+              <td><input type="text" id="tipoContrato" name="tipoContrato" maxlength="50"></td>
+            </tr>              
+            <tr>
+              <th scope="row" colspan="2">Dependencia</th>
+              <td><input type="text" id="dependencia" name="dependencia" maxlength="50"></td>
+            </tr>
+            <tr>
+              <th scope="row" colspan="2">Salario</th>
+              <td><input type="number" id="salario" name="salario" maxlength="50"></td>
+            </tr>
+            <tr>
+              <th scope="row" colspan="2">Puntaje de desempeño</th>
+              <td><input type="number" id="puntajeDes" name="puntajeDes" maxlength="50"></td>
+            </tr>
+            <tr>
+              <th scope="row" colspan="2">Retroalimentación mensual</th>
+              <td><textarea name="Retroalimentacion" id="Retroalimentacion" cols="30" rows="10"></textarea></td>
+            </tr>
+            <tr class="thead-dark">
+              <th scope="row" colspan="3" style="border-radius: 10px;">
+                <button class="botonAceptarGesti" style="cursor:pointer;">Aceptar</button>
+              </th>
+            </tr>
+          </tbody>
+        </table>
+      </div>  
+
+    </div>    
+
+  </div><br>
+  <div style="text-align: center;  margin: 0 auto;">
+    <button onclick="document.location='../login.html'" value="Salir" class="botonSalidaLogin" style="cursor:pointer;">Salir</button>
+  </div> <br>
+</body>
+</html>
