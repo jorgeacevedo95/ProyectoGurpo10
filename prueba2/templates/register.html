@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de usuarios IANSA</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css')}}">
+    <script src="{{ url_for('static', filename='js/funcion.js') }}"></script>
+</head>
+<body id="cuerpoLogin">
+    <div class="tituloLogin" style="width: 25em; margin: 0 auto;">
+        <h1>Registro de Usuarios</h1>
+    </div>    
+    <form action="{{url_for('register')}}" method="post" name="formLogin" id="formLogin" >
+        <img src="{{url_for('static', filename='images/logoIANSA.png')}}"  width="200" height="200" onclick="location.href='https://empresasiansa.cl/iansa-cero-k/'" style="cursor:pointer ;"><br><br>
+        <div><input type="email" name="usuario" maxlength="50" id="usuario" placeholder="@iansa.com" pattern=".+@iansa\.com">
+            <img src= "{{url_for('static', filename='images/user.png')}}" width="20" height="20">
+        </div><br>
+        <div><input type="password" name="password" id="password" placeholder="Contraseña">
+            <img src= "{{url_for('static', filename='images/padlock.png')}}" width="20" height="20">
+        </div><br>
+        <button type="submit" value="Enviar" id="botonIngresoLogin" style="cursor:pointer ;">Enviar</button> <br><br>
+        <div class="OlvidoUyC">regresar a <a href="{{url_for('login')}}" target="_self" style="cursor:pointer ;">login?</a></div>
+    </form>
+    
+</body>
+</html>
