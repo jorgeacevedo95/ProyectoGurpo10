@@ -1,7 +1,17 @@
+<<<<<<< HEAD
 from distutils.log import error
 import os
 from flask import Flask, jsonify, render_template, flash, request, redirect
+=======
+import email
+from email import message
+import os
+from ssl import AlertDescription
+from flask import Flask, render_template, flash, request, redirect, url_for
+
+>>>>>>> c0b81645675b3d5f4a7fbd8e2191611808aa7c0f
 import utils
+from utils import *
 
 from email.message import EmailMessage
 import smtplib
@@ -11,8 +21,25 @@ app=Flask(__name__)
 app.secret_key=os.urandom(24)
 
 @app.route('/')
+def index():
+    return redirect(url_for('login'))
+
+@app.route('/login/', methods=['GET', 'POST'])
 def login():
-    return render_template('login.html')
+    if request.method == 'POST':
+        usua = request.form['usuario']
+        contra = request.form['password']
+        categoria = sql_login_empleados(usua, contra)
+        if categoria == None:
+            return render_template('login.html')
+        elif categoria[0] == 0:
+            return redirect(url_for('superAdministrador'))
+        elif categoria[0] == 1:
+            return render_template('administrador.html')
+        elif categoria[0] == 2:
+            return render_template('usuariofinal.html')
+    else:
+        return render_template('login.html')
 
 @app.route('/register/')
 def register():
@@ -22,19 +49,28 @@ def register():
 def olvidoContraseña():
     return render_template('olvidoContraseña.html')    
 
+@app.route('/superAdministrador/', methods=['GET','POST'])
+def superAdministrador():
+    if request.method == 'POST':
+        id = request.form['BuscarEmpleadoGestionarSA']
+        emple = sql_select_empleados(id)
+        print(emple)
+        
+        
+        return render_template('superAdministrador.html')
+    else:
+        return render_template('superAdministrador.html')
+
 @app.route('/administrador/')
 def administrador():
     return render_template('administrador.html')
-
-@app.route('/superAdministrador/')
-def superAdministrador():
-    return render_template('superAdministrador.html')
 
 @app.route('/usuarioFinal/')
 def usuarioFinal():
     return render_template('usuarioFinal.html')
 
 
+<<<<<<< HEAD
 
 
 
@@ -89,3 +125,5 @@ flash(error)
 
     
     
+=======
+>>>>>>> c0b81645675b3d5f4a7fbd8e2191611808aa7c0f

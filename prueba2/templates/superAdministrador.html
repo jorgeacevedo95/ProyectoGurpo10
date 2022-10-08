@@ -89,7 +89,7 @@
       </div>  
 
       <div id="contenidoDatosGestionSA" style="margin: 7px ;">
-        <form>
+        <form action="" id="formGestionarSA" method="POST" name="formGestionarSA">
           <table class="table" >
             <thead  class="thead-dark">
               <tr>
@@ -99,13 +99,15 @@
             <tbody style="color: whitesmoke;">
               <tr>
                 <th scope="row" colspan="3">
-                  <input type="number" name="buscarEmpleado" id="buscarEmpleado" placeholder="# de identificación">
+                  <input type="text" name="BuscarEmpleadoGestionarSA" id="BuscarEmpleadoGestionarSA" placeholder="# de identificación" >
+                  <button type="submit" value="Buscar" id="botonBuscarGestionar" style="cursor:pointer ;"> BUSCAR</button>
                   <img src="{{url_for('static', filename='images/lupa.png')}}" width="30" height="30" style="cursor:pointer;">
+                
                 </th>                  
               </tr>
               <tr>
                 <th scope="row" colspan="2">Nombre completo</th>                  
-                <td><input type="text" id="nombre" name="nombre" maxlength="50"></td>
+                <td><input method = " GET" type="text" id="nombreGESTION" name="nombreGESTION" maxlength="50"></td>
               </tr>
               <tr>
                 <th scope="row" colspan="2">Cargo</th>                  
@@ -160,7 +162,7 @@
             <form>
               <tr>
                   <th scope="row" colspan="3">
-                    <input type="number" name="buscarEmpleado" id="buscarEmpleado" placeholder="# de identificación">
+                    <input type="string" name="BuscarEmpleadoEliminarSA" id="BuscarEmpleadoEliminarSA" placeholder="# de identificación">
                     <img src="{{url_for('static', filename='images/lupa.png')}}" width="30" height="30" style="cursor:pointer;">
                   </th>                  
               </tr>
