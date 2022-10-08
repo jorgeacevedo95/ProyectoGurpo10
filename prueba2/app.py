@@ -1,11 +1,11 @@
-import email
+from distutils.log import error
 import os
-from flask import Flask, render_template, flash
+from flask import Flask, jsonify, render_template, flash, request, redirect
 import utils
 
 from email.message import EmailMessage
 import smtplib
-
+from db import get_db, close_db
 
 app=Flask(__name__)
 app.secret_key=os.urandom(24)
@@ -38,3 +38,54 @@ def usuarioFinal():
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+def sql_select_usuarios():
+    strql = "SELECT * FROM usuarios"
+    con = get_db()
+    cursorObj=con.cursor()
+    cursorObj.execute(strql)
+    usuario = cursorObj.fetchall()
+    return usuario
+
+user = get_db.execuite('SELECT USUARIO * FROM WHERE usuario = ?, contraeña '(username, password)).fetchone()
+close_db()
+
+if user is None:
+    error='Usuario No existe'
+else:
+    redirect('mensaje')     
+flash(error)
+
+
+    
+    
