@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 from distutils.log import error
 import os
 from flask import Flask, jsonify, render_template, flash, request, redirect
@@ -10,6 +11,11 @@ from ssl import AlertDescription
 from flask import Flask, render_template, flash, request, redirect, url_for
 
 >>>>>>> c0b81645675b3d5f4a7fbd8e2191611808aa7c0f
+=======
+import os
+import email
+from flask import Flask, render_template, flash, request, redirect, url_for
+>>>>>>> Franky_Backend
 import utils
 from utils import *
 
@@ -40,6 +46,46 @@ def login():
             return render_template('usuariofinal.html')
     else:
         return render_template('login.html')
+<<<<<<< HEAD
+=======
+
+
+def sql_login_empleados(Correo, Contrasña):
+    strsql = "SELECT Categoria FROM Empleados WHERE Correo = '"+Correo+"' AND Contraseña = '"+Contrasña+"';"
+    con = get_db()
+    oCursor = con.cursor()
+    oCursor.execute(strsql)
+    Cate= oCursor.fetchone()
+    close_db()
+    return Cate
+
+
+def sql_select_empleados(Cedula):
+    strsql = "SELECT  Nombre, Cargo, Fecha_Ingreso, Fecha_Fin,Tipo_Contrato, Dependencia, Salario, Puntaje FROM Empleados WHERE Cedula = " + Cedula  + ";"
+    con = get_db
+    oCursor = con.cursor()
+    oCursor.execute(strsql)
+    Empleado = oCursor.fetchall()
+    close_db()
+    return Empleado
+
+def sql_edit_empleados(Cedula, Nombre, Cargo, Fecha_Ingreso, Fecha_Fin,Tipo_Contrato, Dependencia, Salario, Puntaje, Correo,Contrasña):
+    strsql = "UPDATE Empleados SET Cedula = '" + Cedula + "',  Nombre ='" + Nombre + "', Cargo = '" + Cargo + "', Fecha_Ingreso = " + Fecha_Ingreso + ", Fecha_Fin = " + Fecha_Fin + " , Tipo_Contrato = '" + Tipo_Contrato + "' , Dependencia ='" +  Dependencia + "', Salario = " +  Salario + ", Puntaje = " + Puntaje + ", Correo = '" + Correo+ "', Contrasña = '" + Contrasña +"' WHERE Cedula = " + Cedula + ";"
+    con = get_db()
+    oCursor = con.cursor()
+    oCursor.execute(strsql)
+    con.commit()
+    close_db()
+
+
+
+
+
+
+
+
+
+>>>>>>> Franky_Backend
 
 @app.route('/register/')
 def register():
@@ -70,6 +116,7 @@ def usuarioFinal():
     return render_template('usuarioFinal.html')
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -127,3 +174,5 @@ flash(error)
     
 =======
 >>>>>>> c0b81645675b3d5f4a7fbd8e2191611808aa7c0f
+=======
+>>>>>>> Franky_Backend

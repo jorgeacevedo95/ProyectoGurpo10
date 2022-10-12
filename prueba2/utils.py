@@ -2,9 +2,16 @@
 
 import re
 from validate_email import validate_email
+<<<<<<< HEAD
 import sqlite3
 from sqlite3 import Error
 
+=======
+import sqlite3, db
+from sqlite3 import Error
+
+
+>>>>>>> Franky_Backend
 
 pass_reguex = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&.])[A-Za-z\d@$!%*?&.]{8,}$"
 user_reguex = "^[a-zA-Z0-9_.-]+$"
@@ -23,6 +30,7 @@ def sql_connections():
     except Error:
         print(Error)
 
+
 def isEmailValid(email):
 	is_valid = validate_email(email)
 	return is_valid
@@ -39,6 +47,7 @@ def isPasswordValid(password):
 	else:
 		return False
 
+<<<<<<< HEAD
 def sql_login_empleados(Correo, Contrasña):
     strsql = "SELECT Categoria FROM Empleados WHERE Correo = '"+Correo+"' AND Contraseña = '"+Contrasña+"';"
     con = sql_connections()
@@ -64,5 +73,10 @@ def sql_edit_empleados(Cedula, Nombre, Cargo, Fecha_Ingreso, Fecha_Fin,Tipo_Cont
     oCursor.execute(strsql)
     con.commit()
     con.close()
+=======
+
+
+
+>>>>>>> Franky_Backend
     
     

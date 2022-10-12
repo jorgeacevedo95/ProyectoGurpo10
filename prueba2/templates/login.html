@@ -10,9 +10,9 @@
 </head>
 <body id="cuerpoLogin">
     <div class="tituloLogin" style="width: 25em; margin: 0 auto;">
-        <h1>Ingreso de empleados</h1>
+        <h1>Ingreso de Empleados</h1>
     </div>    
-    <form action="" method="post" name="formLogin" id="formLogin" >
+    <form action="{{url_for('login')}}" method="post" name="formLogin" id="formLogin" >
         <img src="{{url_for('static', filename='images/logoIANSA.png')}}"  width="200" height="200" onclick="location.href='https://empresasiansa.cl/iansa-cero-k/'" style="cursor:pointer ;"><br><br>
         <div><input type="email" name="usuario" maxlength="50" id="usuario" placeholder="@iansa.com" pattern=".+@iansa\.com">
             <img src= "{{url_for('static', filename='images/user.png')}}" width="20" height="20">
